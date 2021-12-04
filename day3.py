@@ -1,6 +1,3 @@
-import math
-
-
 class Day3:
     def __init__(self) -> None:
         filename = "day3_input.txt"
