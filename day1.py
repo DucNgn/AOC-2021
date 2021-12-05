@@ -1,12 +1,17 @@
 from collections import deque
 
-from utils import read_input
-
 
 class Day1:
     def __init__(self) -> None:
         filename = "day1_input.txt"
-        self.reports = read_input(filename)
+        self.reports = self.read_input(filename)
+
+    def read_input(self, filename):
+        input_file = open(filename, "r")
+        # Works for not too large file
+        inputs = [int(x) for x in input_file.read().split()]
+        input_file.close()
+        return inputs
 
     def part1(self):
         res = self.calculate_increments(self.reports)
